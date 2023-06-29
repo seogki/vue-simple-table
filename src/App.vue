@@ -4,10 +4,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import SamplePage from "./components/SamplePage.vue";
-export default {
-  name: "App",
-  components: { SamplePage }
-};
+export default defineComponent({
+  components: { SamplePage },
+  setup() {}
+});
 </script>
