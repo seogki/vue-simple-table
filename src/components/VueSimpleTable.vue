@@ -51,21 +51,20 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType } from "vue";
-
-export default defineComponent({
+import Vue from "vue";
+export default Vue.extend({
   props: {
     title: String,
     colgroup: {
-      type: Array as PropType<String[]>,
+      type: Array as () => String[],
       default: () => []
     },
     thead: {
-      type: Array as PropType<String[]>,
+      type: Array as () => String[],
       default: () => []
     },
     list: {
-      type: Array as PropType<any[]>,
+      type: Array as () => any[],
       default: () => []
     },
     fullSize: {
@@ -80,25 +79,19 @@ export default defineComponent({
       default: false
     }
   },
-  setup(props) {
-    const tableStyleObj = computed(() => {
+  computed: {
+    tableStyleObj() {
       return {
-        textAlign: props.center ? "center" : undefined,
-        width: props.fullSize ? "100%" : undefined,
-        height: props.fullSize ? "100%" : undefined
+        textAlign: this.center ? "center" : undefined,
+        width: this.fullSize ? "100%" : undefined,
+        height: this.fullSize ? "100%" : undefined
       };
-    });
-
-    const labelStyleObj = computed(() => {
+    },
+    labelStyleObj() {
       return {
-        textAlign: props.center ? "center" : undefined
+        textAlign: this.center ? "center" : undefined
       };
-    });
-
-    return {
-      labelStyleObj,
-      tableStyleObj
-    };
+    }
   }
 });
 </script>

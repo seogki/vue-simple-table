@@ -19,11 +19,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import Vue from "vue";
 import VueSimpleTable from "./VueSimpleTable.vue";
-export default defineComponent({
-  components: { VueSimpleTable },
-  setup() {}
+export default Vue.extend({
+  components: { VueSimpleTable }
 });
 </script>
 

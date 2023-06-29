@@ -5,10 +5,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import Vue from "vue";
 import SamplePage from "./components/SamplePage.vue";
-export default defineComponent({
-  components: { SamplePage },
-  setup() {}
+export default Vue.extend({
+  components: { SamplePage }
 });
 </script>

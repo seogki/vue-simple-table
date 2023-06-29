@@ -1,13 +1,14 @@
 {
   "name": "@seogki/vue-simple-table",
   "description": "Simple Vue Slot Table",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "bundle": "vue-cli-service build --target lib --name vue-simple-table ./src/components/index.ts"
+    "bundle": "vue-cli-service build --target lib --name vue-simple-table ./src/components/index.ts",
+    "publish": "npm publish --access public"
   },
   "author": {
     "name": "Seogki Hong",
@@ -26,11 +27,7 @@
     "slot"
   ],
   "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
+    "dist/*"
   ],
   "dependencies": {
     "core-js": "^3.8.3",
